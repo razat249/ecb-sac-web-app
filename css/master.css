@@ -1,0 +1,17 @@
+.home-intro{
+	height: 500px;
+	color: white;
+	padding-top: 50px;
+}
+
+.home-intro-content{
+	font-size: 1.3em;
+}
+
+.home-hamburger-menu{
+	margin-right: 20px;
+}
+
+.home-brand-logo{
+	margin-left: 10px;
+}
