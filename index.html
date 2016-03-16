@@ -3,33 +3,35 @@
 <head>
 	<title>ECB | SAC</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/master.css">
 
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	<link rel="stylesheet" type="text/css" href="css/master.css">
 </head>
 
 <body class="animated fadeIn">
-
+	<div class="navbar-fixed">
 	<nav ng-controller="HeaderCtrl">
-		<div class="nav-wrapper white">
-			<a href="/home" class="brand-logo teal-text left home-brand-logo">SAC</a>
-			<a href="#" data-activates="mobile-demo" class="button-collapse teal-text right home-hamburger-menu"><i class="material-icons"> menu </i></a>
+		<div class="nav-wrapper blue-grey darken-2">
+			<a href="#/home" class="brand-logo left home-brand-logo">SAC</a>
+			<a href="#" data-activates="mobile-demo" class="button-collapse right home-hamburger-menu"><i class="material-icons"> menu </i></a>
 			<ul class="right hide-on-med-and-down">
-		    	<li><a href="/home">Home</a></li>
-		    	<li><a href="badges.html">Log In (admin only)</a></li>
+		    	<li><a href="#/home">Home</a></li>
+		    	<li><a href="#/login">Log In (admin only)</a></li>
 		    	<li><a href="collapsible.html">About</a></li>
 		    	<li><a href="mobile.html">Help</a></li>
 		    </ul>
 		  	<ul class="side-nav" id="mobile-demo">
-		  		<li><a href="/home">Home</a></li>
-		    	<li><a href="badges.html">Log In (admin only)</a></li>
+		  		<li><a href="#/home">Home</a></li>
+		    	<li><a href="#/login">Log In (admin only)</a></li>
 		    	<li><a href="collapsible.html">About</a></li>
 		    	<li><a href="mobile.html">Help</a></li>
 			</ul>
 		</div>
 	</nav>
+	</div>
 
 	<div ui-view class="animated fadeIn"></div>
 
@@ -63,7 +65,7 @@
 
 	<!-- temperary templete -->
 	<script type="text/ng-template" id="/home.html">
-	<div class="teal darken-2 home-intro">
+	<div class="blue-grey home-intro">
 		<div class="container">
 			<h3 class="home-intro-heading">Student Activity Center</h3>
 			<p class="home-intro-content">Government Engineering College, Bikaner is one among the most renowned technical institutes of Rajasthan. The institute is known not only for academic excellence but also for offering superior opportunities to its students to participate in recreational and creative activities. These activities are administered through the Student Affairs Council (SAC), which serves as the nerve Centre of all cocurricular activities in the campus.</p>
@@ -97,6 +99,49 @@
 		</div>
 	</section>
 	</script>
+
+	<!-- temperary templete -->
+	<script type="text/ng-template" id="/login.html">
+		<section ng-controller="LoginCtrl">
+		<div class="row login-form">
+			<h3 class="col s12"> Log In</h3>
+		    <form class="col s12">
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">account_circle</i>
+		          <input id="icon_prefix" type="text" class="validate">
+		          <label for="icon_prefix">Username</label>
+		        </div>
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">lock</i>
+		          <input id="icon_password" type="tel" class="validate">
+		          <label for="icon_password">Password</label>
+		        </div>
+		      </div>
+		    </form>
+		</div>
+		</section>
+	</script>
+
+	<!-- temperary templete -->
+	<script type="text/ng-template" id="/gallery.html">
+		<section ng-controller="GalleryCtrl">
+			<div class="blue-grey home-intro">
+				<div class="container">
+					<h3 class="home-intro-heading">Gallery</h3>
+					<p class="home-intro-content">Government Engineering College, Bikaner is one among the most renowned technical institutes of Rajasthan. The institute is known not only for academic excellence but also for offering superior opportunities to its students to participate in recreational and creative activities. These activities are administered through the Student Affairs Council (SAC), which serves as the nerve Centre of all cocurricular activities in the campus.</p>
+				</div>
+			</div>
+			<div class="row animated fadeInUp" >
+				<div ng-repeat="i in pupu">
+					<img style="padding: 2px;" class="responsive-img gallery-img col m4 s6 l3" src="{{i}}">
+				</div>
+			</div>
+		</section>
+	</script>
+
+
+
 
 	<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
